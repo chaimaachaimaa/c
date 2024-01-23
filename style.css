@@ -1,0 +1,81 @@
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family:Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 1.95em;
+}
+
+h2{
+    text-align:center;
+  }
+
+li{
+    margin-top: 20px;
+}
+
+img{
+    border: 5px solid blue;
+    border-radius: 35px;
+    width: 100%;
+  }
+
+.label{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Styles pour la vue mobile (mobile-first) */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  /* Styles pour la vue tablette */
+  @media (min-width: 772px) {
+    body {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    figure {
+      border-radius: 50%;
+    }
+  
+    figure:last-child {
+      grid-column: span 2;
+    }
+  }
+  
+  /* Styles pour la vue grand écran */
+  @media (min-width: 992px) {
+    figure:nth-child(3n) {
+      grid-column: span 2;
+      border-radius: 0;
+    }
+  }
+  
+  /* Styles pour l'option prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce) {
+    body {
+      scroll-behavior: auto;
+    }
+  }
+  
+  /* Styles pour l'option de couleurs foncées */
+  @media (prefers-color-scheme: dark) {
+    figure {
+      background-color: darkcolor;
+      color: lightcolor;
+      border-color: black;
+    }
+  }
+  
